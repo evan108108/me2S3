@@ -5,9 +5,9 @@ Node Module that watches a folder and pushes contained files to S3.
 
 ```
 var client1 = require('./lib/me2S3').me2S3.createService({
-    key: 'AKIAI56GLNE6SVAIB7GA', 
-    secret: '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',
-    bucket: 'labs.controlgroup.com',
+    key: 'AKIAI56GLNE6SXXXXXXX,
+    secret: 'p4NXSuM9gEY50LZuVmS+XXXXXXXXXXXXXXXXXXXXX',
+    bucket: 'your.bucket.com',
     watchDir: './sync', //Name of the directory to watch (items will be pushed to S3)
     failDir: './syncFail',/Name of the directory to put files that fail to upload
     checkInterval: 1000, //Will check the directory for files every [checkInterval] milliseconds
@@ -16,9 +16,9 @@ var client1 = require('./lib/me2S3').me2S3.createService({
 });
 
 var client2 = require('./lib/me2S3').me2S3.createService({
-    key: 'AKIAI56GLNE6SVAIB7GA',
-    secret: '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',
-    bucket: 'labs.controlgroup.com',
+    key: 'AKIAI56GLNE6SXXXXXXX,
+    secret: 'p4NXSuM9gEY50LZuVmS+XXXXXXXXXXXXXXXXXXXXX',
+    bucket: 'your.bucket.com',
     watchDir: './sync2',
     failDir: './syncFail',
     checkInterval: 1000,
