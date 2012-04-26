@@ -6,7 +6,7 @@
   "author": "evan.frohlich <evan108108@gmail.com>",
   "main": "./index.js",
   "engines": { "node": ">= 0.4.11" },
-  repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/evan108108/me2S3.git"
   },
