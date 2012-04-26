@@ -9,5 +9,8 @@
   repository": {
     "type": "git",
     "url": "git://github.com/evan108108/me2S3.git"
+  },
+  "dependencies": {
+    "noxmox": "~0.1.8"
   }
 }
