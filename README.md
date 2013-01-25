@@ -3,7 +3,7 @@ me2S3
 
 Node Module that watches a folder and pushes contained files to S3.
 
-```
+```js
 var client1 = require('./lib/me2S3').me2S3.createService({
     key: 'AKIAI56GLNE6SXXXXXXX,
     secret: 'p4NXSuM9gEY50LZuVmS+XXXXXXXXXXXXXXXXXXXXX',
