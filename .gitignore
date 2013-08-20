@@ -1,0 +1,32 @@
+## Binaries
+*.gz
+
+## OS garbage
+.DS_Store
+
+## FlatG installer garbage
+composer.lock
+
+## Build et al garbage
+.tmp
+.sass-cache
+node_modules
+
+tmp
+dist
+temp
+libs/*
+
+## Bower cruft
+app/components
+
+## FlatG cruft
+app/backend
+app/themes
+
+## IDE garbage
+*.sublime-*
+
+## Secret stuff :)
+.ftppass
+.passwords
