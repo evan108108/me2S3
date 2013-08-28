@@ -1,7 +1,8 @@
 'use strict';
 
-var service;
+var service, required;
 var me2S3 = require('../lib/me2S3.js');
+var Uploader = require('../lib/uploader.js');
 
 /*
 	======== A Handy Little Nodeunit Reference ========
@@ -23,17 +24,52 @@ var me2S3 = require('../lib/me2S3.js');
 		test.ifError(value)
 */
 
-exports['me2S3'] = {
+exports['Uploader'] = {
 	setUp: function(done) {
 		// setup here
+		required = Uploader.required;
 		done();
 	},
-	'no args': function(test) {
-		test.throws( me2S3.createService({}));
+	'Invalid configuration options.': function(test) {
+		var noOptions = function(){
+			service = new Uploader();
+		};
+		test.throws(noOptions, Error, 'Uploader needs config object.');
 
-		// test.expect(service);
-		// tests here
-		// test.equal(me2S3.awesome(), 'awesome', 'should be awesome.');
+		var falsyOptions = function(){
+			service = new Uploader({});
+		};
+
+		
+
+		var msg = new RegExp('Option "'+required[0]+'" is required.');
+		test.throws(falsyOptions, function(err){
+			if((err instanceof Error) &&
+				msg.test(err)) return true;
+		});
+
+		test.done();
+	},
+	'Default config values':function(test){
+
+		var options = {};
+		required.forEach(function(option){
+			options[option] = true;
+		});
+
+		service = new Uploader(options);
+		required.forEach(function(option){
+			test.ok(service[option],'Initialization should create a property out of the key '+option);
+		});
+
+		var defaultPath = require('fs').realpathSync('.');
+		test.equal(service.watchDir, defaultPath, 'If not watchDir provided, we get pwd');
+		
+		test.deepEqual(service.options, options,'We should have an options property on the created instance.');
+		test.done();
+	},
+	'getOptions should provide a cloned options object.':function(test){
+
 		test.done();
 	},
 };
