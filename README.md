@@ -1,2 +1,22 @@
-Here, we should know how to append to the end.
-something else goes here
+# me2S3
+
+Simple local to S3 sync tool.
+
+## Getting Started
+Install the module with: `npm install me2S3`
+
+## Documentation
+_(Coming soon)_
+
+## Examples
+_(Coming soon)_
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2013 goliatone  
+Licensed under the MIT license.

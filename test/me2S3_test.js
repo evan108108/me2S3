@@ -26,11 +26,12 @@ var me2S3 = require('../lib/me2S3.js');
 exports['me2S3'] = {
 	setUp: function(done) {
 		// setup here
-		service = me2S3.createService({});
 		done();
 	},
 	'no args': function(test) {
-		test.expect(service);
+		test.throws( me2S3.createService({}));
+
+		// test.expect(service);
 		// tests here
 		// test.equal(me2S3.awesome(), 'awesome', 'should be awesome.');
 		test.done();
