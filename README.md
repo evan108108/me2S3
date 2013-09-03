@@ -13,7 +13,6 @@ _(Coming soon)_
 var fs = require('fs');
 //We are expecting to have a file .passwords with JSON format
 //with the key/secret.
-//TODO:
 var contents = fs.readFileSync(__dirname+'/.passwords', 'utf-8');
 var config = JSON.parse(contents);
 
