@@ -1,1 +1,1 @@
-exports.me2S3 = require('./me2S3.js');
+exports.me2S3 = require('./lib/me2S3.js');

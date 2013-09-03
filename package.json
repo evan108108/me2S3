@@ -1,16 +1,51 @@
 {
-  "name": "me2S3",
-  "description": "Watch a Directory and push items to S3",
-  "keywords": ["aws", "amazon", "s3", "watch", "directory"],
-  "version": "0.0.1",
-  "author": "evan.frohlich <evan108108@gmail.com>",
-  "main": "./index.js",
-  "engines": { "node": ">= 0.4.11" },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/evan108108/me2S3.git"
-  },
-  "dependencies": {
-    "noxmox": "~0.1.8"
-  }
+	"name": "me2S3",
+	"description": "Watch a Directory and push items to S3",
+	"keywords": [
+		"aws",
+		"amazon",
+		"s3",
+		"watch",
+		"directory"
+	],
+	"version": "0.0.1",
+	"author": "evan.frohlich <evan108108@gmail.com>",
+	"contributors": ["goliatone <hello@goliatone.com> (http://goliatone.com)"],
+	"main": "./index.js",
+	"engines": {
+		"node": ">= 0.4.11"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/evan108108/me2S3.git"
+	},
+	"dependencies": {
+		"knox": "~0.8.6",
+		"minimatch": "~0.2.12",
+		"walkdir":"~0.0.4",
+		"watch":"~0.8.0",
+		"mkdirp":"~0.3.5",
+		"queue":"~1.0.1"
+	},
+	"devDependencies": {
+		"grunt": "~0.4",
+		"grunt-cli": "~0.1",
+		"grunt-contrib-copy": "~0.4.0",
+		"grunt-contrib-concat": "~0.1.3",
+		"grunt-contrib-uglify": "~0.2.0",
+		"grunt-contrib-jshint": "~0.3.0",
+		"grunt-contrib-connect": "~0.2.0",
+		"grunt-contrib-clean": "~0.4.0",
+		"grunt-contrib-livereload": "~0.1.2",
+		"grunt-regarde": "~0.1.1",
+		"grunt-karma": "~0.5.0",
+		"grunt-open": "~0.2.0",
+		
+		"grunt-contrib-jshint": "~0.1.1",
+		"grunt-contrib-nodeunit": "~0.1.2",
+		"grunt-contrib-watch": "~0.2.0"
+	},
+	"scripts": {
+		"test": "grunt nodeunit"
+	}
 }
